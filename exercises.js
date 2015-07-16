@@ -134,10 +134,11 @@ console.log(filterLongWords(["avkndlv", "anl", "vajindvladnvl"], 5))
 //Represent the frequency listing as a Javascript object. Try it with something like charFreq("abbabcbdbabdbdbabababcbcbab").
 // ---------------------
 
-function charFreq(text){
-  var obj = {};
-  for (var i = 0; i < text.length; i++){
-  obj[text[i]] = ++obj[text[i]]||1;
-}
-return obj;
+function charFreq(txt){
+    var obj = {};
+    for(var i = 0; i < txt.length; i++){
+        obj[txt[i]] += 1;
+        obj[txt[i]] = 1;
+    }
+    return obj;
 };
